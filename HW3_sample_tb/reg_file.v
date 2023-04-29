@@ -36,7 +36,9 @@ always @(posedge clk) begin
         end
     end 
     else if (we & rdst_id != 0) begin
+        //$display(rdst_id);
         R[rdst_id] <= rdst;
+        //$display(R[rdst_id]);
     end
 end
 

@@ -19,7 +19,9 @@ module dmem (
 
     // Write operation
     always @(posedge clk) begin
+        //$display("Data Memory before ", RAM[addr[5:2]]);
         if (we) RAM[addr[5:2]] <= wdata;
+        //$display("Data Memory after ", RAM[addr[5:2]]);
     end
 
 endmodule
