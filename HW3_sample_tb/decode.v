@@ -125,7 +125,7 @@ module decode #(parameter DWIDTH = 32)
             we_dmem = 1'b1;
             we_regfile = 1'b1;
             is_load = 1'b0;
-            $display(rs1_id, rdst_id, imm);
+            //$display(rs1_id, rdst_id, imm);
         end
         6'b000100: begin // I-Type instructions (BEQ)
             rs1_id  = instr[25:21];
