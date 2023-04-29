@@ -14,7 +14,7 @@ module core_top #(
 
     // Program Counter signals
     reg  [DWIDTH-1:0] pc;
-    wire pc_in;
+    wire [31 : 0] pc_in;
     always @(posedge clk) begin
         if (rst)
             pc <= 0;
@@ -22,12 +22,16 @@ module core_top #(
             pc <= pc_in;
     end
 
-    wire _RDATA;
+    wire [31 : 0] _RDATA;
     imem imem_inst(
         .addr(pc),
         .rdata(_RDATA)
     );
-    wire _JT, _JA, _WD, _WR, _OP, _SSEL, _IMM, _RS1_ID, _RS2_ID, _RDST_ID;
+    wire [31 : 0] _IMM, _JA;
+    wire [ 2 : 0] _JT;
+    wire [ 3 : 0] _OP;
+    wire _SSEL, _WD, _WR;
+    wire [4 : 0] _RS1_ID, _RS2_ID, _RDST_ID;
     wire _LW;
     decode decode_inst (
         // input
@@ -48,8 +52,7 @@ module core_top #(
 
         .is_load(_LW)
     );
-    wire _RS1, _RS2;
-    wire _REG_RDST;
+    wire [31 : 0] _RS1, _RS2, _REG_RDST;
     reg_file reg_file_inst (
         // input
         .clk(clk),
@@ -66,7 +69,8 @@ module core_top #(
         .rs1(_RS1), // rs
         .rs2(_RS2)  // rt
     );
-    wire _RD, _ALU_RS2, _ZERO;
+    wire [31 : 0] _RD, _ALU_RS2;
+    wire _ZERO;
     alu alu_inst (
         // input
         .op(_OP),
@@ -78,7 +82,7 @@ module core_top #(
         .zero(_ZERO),
         .overflow()
     );
-    wire _DMEM_RDATA;
+    wire [31 : 0] _DMEM_RDATA;
     // Dmem
     dmem dmem_inst (
         .clk(clk),
@@ -88,12 +92,12 @@ module core_top #(
         .rdata(_DMEM_RDATA)
     );
 
-    wire _PC_ADDER_RESULT;
+    wire [31 : 0] _PC_ADDER_RESULT;
     pc_adder pc_adder_inst(
         .pc(pc),
         .result(_PC_ADDER_RESULT)
     );
-    wire _DECODE_ADDER;
+    wire [31 : 0]_DECODE_ADDER;
     
     decode_adder decode_adder_inst(
         .pc(_PC_ADDER_RESULT),

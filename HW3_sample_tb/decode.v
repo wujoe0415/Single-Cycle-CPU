@@ -16,7 +16,7 @@ module decode #(parameter DWIDTH = 32)
     output reg [4 : 0]      rdst_id, // register ID for rd or rt (if used).
 
     output reg [2 : 0]      jump_type,
-    output reg [32: 0]      jump_addr,
+    output reg [31: 0]      jump_addr,
     output reg              we_dmem,
     output reg              we_regfile,
 
