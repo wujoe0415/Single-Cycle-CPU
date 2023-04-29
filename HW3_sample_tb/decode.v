@@ -8,7 +8,7 @@ module decode #(parameter DWIDTH = 32)
     input [DWIDTH-1:0]  instr,   // Input instruction.
 
     output reg [3 : 0]      op,      // Operation code for the ALU.
-    output reg              ssel,    // Select the signal for either the immediate value or rs2.
+    output reg [1 : 0]      ssel,    // Select the signal for either the immediate value or rs2.
 
     output reg [DWIDTH-1:0] imm,     // The immediate value (if used).
     output reg [4 : 0]      rs1_id,  // register ID for rs.
@@ -52,7 +52,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = instr[25:21];
             rs2_id  = instr[20:16];
             rdst_id = instr[15:11];
-            ssel    = 1'b1;
+            ssel    = 2'b10;
             imm = 32'b0;
             jump_addr = 32'b0;
             jump_type = 2'b0;
@@ -70,6 +70,7 @@ module decode #(parameter DWIDTH = 32)
                     begin
                         op = OP_JR;
                         jump_type = 3'b011;
+                        ssel = 2'b01;
                         we_regfile = 1'b0;
                     end
                 default:    op = OP_NOT_DEFINED;
@@ -79,7 +80,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = instr[25:21];
             rdst_id = instr[20:16];
             imm     = {{16{instr[15]}}, instr[15:0]};
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_ADD;
             rs2_id  = 5'b0;
             jump_addr = 32'b0;
@@ -92,7 +93,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = instr[25:21];
             rdst_id = instr[20:16];
             imm     = {{16{instr[15]}}, instr[15:0]};
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_SLT;
             rs2_id  = 5'b0;
             jump_addr = 32'b0;
@@ -105,7 +106,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = instr[25:21];
             rdst_id = instr[20:16];
             imm     = {{16{instr[15]}}, instr[15:0]};
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_ADD;
             rs2_id  = 5'b0;
             jump_addr = 32'b0;
@@ -116,11 +117,11 @@ module decode #(parameter DWIDTH = 32)
         end
         6'b101011: begin // I-Type instructions (SW)
             rs1_id  = instr[25:21];
-            rdst_id = instr[20:16];
+            rdst_id = 5'b0;
             imm     = {{16{instr[15]}}, instr[15:0]};
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_ADD;
-            rs2_id  = 5'b0;
+            rs2_id  = instr[20:16];
             jump_addr = 32'b0;
             jump_type = 2'b0;
             we_dmem = 1'b1;
@@ -132,7 +133,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = instr[25:21];
             rdst_id = instr[20:16];
             imm     = {{16{instr[15]}}, instr[15:0]};
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_SUB;
             rs2_id  = 5'b0;
             jump_addr = 32'b0;
@@ -145,7 +146,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = 5'b0;
             rdst_id = 5'b0;
             imm     = 32'b0;
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_NOT_DEFINED;
             rs2_id  = 5'b0;
             jump_addr = instr[25:0];
@@ -158,7 +159,7 @@ module decode #(parameter DWIDTH = 32)
             rs1_id  = 5'b0;
             rdst_id = 5'b0;
             imm     = 32'b0;
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             op      = OP_NOT_DEFINED;
             rs2_id  = 5'b0;
             jump_addr = instr[25:0];
@@ -169,7 +170,7 @@ module decode #(parameter DWIDTH = 32)
         end
         default: begin
             op      = OP_NOT_DEFINED;
-            ssel    = 1'b0;
+            ssel    = 2'b0;
             rs1_id  = 5'b0;
             rs2_id  = 5'b0;
             rdst_id = 5'b0;

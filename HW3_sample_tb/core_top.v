@@ -30,7 +30,8 @@ module core_top #(
     wire [31 : 0] _IMM, _JA;
     wire [ 2 : 0] _JT;
     wire [ 3 : 0] _OP;
-    wire _SSEL, _WD, _WR;
+    wire [ 1 : 0] _SSEL;
+    wire _WD, _WR;
     wire [4 : 0] _RS1_ID, _RS2_ID, _RDST_ID;
     wire _LW;
     decode decode_inst (

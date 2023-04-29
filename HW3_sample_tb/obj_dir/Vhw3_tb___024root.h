@@ -18,6 +18,7 @@ VL_MODULE(Vhw3_tb___024root) {
     CData/*0:0*/ hw3_tb__DOT__start;
     CData/*2:0*/ hw3_tb__DOT__core_top_inst__DOT___JT;
     CData/*3:0*/ hw3_tb__DOT__core_top_inst__DOT___OP;
+    CData/*1:0*/ hw3_tb__DOT__core_top_inst__DOT___SSEL;
     CData/*0:0*/ hw3_tb__DOT__core_top_inst__DOT___WR;
     CData/*4:0*/ hw3_tb__DOT__core_top_inst__DOT___RS1_ID;
     CData/*4:0*/ hw3_tb__DOT__core_top_inst__DOT___RS2_ID;

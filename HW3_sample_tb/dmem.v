@@ -19,8 +19,12 @@ module dmem (
 
     // Write operation
     always @(posedge clk) begin
-        //$display("Data Memory before ", RAM[addr[5:2]]);
-        if (we) RAM[addr[5:2]] <= wdata;
+        if (we)
+        begin
+            
+            $display("Save in ", RAM[addr[5:2]], " Value is ", wdata); 
+            RAM[addr[5:2]] <= wdata;
+        end
         //$display("Data Memory after ", RAM[addr[5:2]]);
     end
 
