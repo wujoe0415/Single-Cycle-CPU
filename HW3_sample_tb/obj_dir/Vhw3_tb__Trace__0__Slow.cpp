@@ -313,20 +313,15 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_full_sub_0(Vhw3_tb___024root* vlSelf,
     tracep->fullIData(oldp+80,((vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
                                 << 2U)),32);
     tracep->fullIData(oldp+81,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA),32);
-    tracep->fullBit(oldp+82,((IData)((0U == (0xfc000000U 
-                                             & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))));
+    tracep->fullBit(oldp+82,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL));
     tracep->fullCData(oldp+83,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1_ID),5);
     tracep->fullCData(oldp+84,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID),5);
     tracep->fullCData(oldp+85,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID),5);
     tracep->fullCData(oldp+86,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT),3);
     tracep->fullIData(oldp+87,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA),32);
-    tracep->fullBit(oldp+88,((IData)((0xac000000U == 
-                                      (0xfc000000U 
-                                       & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))));
+    tracep->fullBit(oldp+88,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___WD));
     tracep->fullBit(oldp+89,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR));
-    tracep->fullBit(oldp+90,((IData)((0x8c000000U == 
-                                      (0xfc000000U 
-                                       & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))));
+    tracep->fullBit(oldp+90,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___LW));
     tracep->fullCData(oldp+91,((vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
                                 >> 0x1aU)),7);
     tracep->fullCData(oldp+92,((0x3fU & vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)),6);
@@ -351,18 +346,13 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_full_sub_0(Vhw3_tb___024root* vlSelf,
     tracep->fullIData(oldp+109,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__dmem_inst__DOT__RAM[14]),32);
     tracep->fullIData(oldp+110,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__dmem_inst__DOT__RAM[15]),32);
     tracep->fullCData(oldp+111,((0x3fU & vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc)),6);
-    tracep->fullIData(oldp+112,((IData)((0x8c000000U 
-                                         == (0xfc000000U 
-                                             & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))),32);
-    tracep->fullIData(oldp+113,(((IData)((0x8c000000U 
-                                          == (0xfc000000U 
-                                              & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))
+    tracep->fullIData(oldp+112,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___LW),32);
+    tracep->fullIData(oldp+113,(((IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___LW)
                                   ? vlSelf->hw3_tb__DOT__core_top_inst__DOT__dmem_inst__DOT__RAM
                                  [(0xfU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result 
                                            >> 2U))]
                                   : vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)),32);
-    tracep->fullCData(oldp+114,((IData)((0U == (0xfc000000U 
-                                                & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))),2);
+    tracep->fullCData(oldp+114,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL),2);
     tracep->fullIData(oldp+115,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[0]),32);
     tracep->fullIData(oldp+116,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[1]),32);
     tracep->fullIData(oldp+117,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[2]),32);
