@@ -124,9 +124,9 @@ module decode #(parameter DWIDTH = 32)
             jump_addr = 32'b0;
             jump_type = 2'b0;
             we_dmem = 1'b1;
-            we_regfile = 1'b1;
+            we_regfile = 1'b0;
             is_load = 1'b0;
-            $display(rs1_id, rdst_id, imm);
+            //$display(rs1_id, rdst_id, imm);
         end
         6'b000100: begin // I-Type instructions (BEQ)
             rs1_id  = instr[25:21];
