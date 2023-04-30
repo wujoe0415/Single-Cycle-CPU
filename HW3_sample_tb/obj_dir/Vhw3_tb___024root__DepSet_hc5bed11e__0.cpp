@@ -18,7 +18,7 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__2(Vhw3_tb___024root* vlSelf
         VL_WRITEF("\033[0;38;5;111m[Pattern]\033[m\n");
         vlSelf->hw3_tb__DOT__start = 0U;
         __Vdly__hw3_tb__DOT__cycle_count = 0U;
-    } else if (VL_UNLIKELY((0x19U == vlSelf->hw3_tb__DOT__cycle_count))) {
+    } else if (VL_UNLIKELY((8U == vlSelf->hw3_tb__DOT__cycle_count))) {
         vlSelf->hw3_tb__DOT__golden_reg[0U] = 0U;
         vlSelf->hw3_tb__DOT__i = 0x10U;
         vlSelf->finish = 1U;
@@ -29,10 +29,10 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__2(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__golden_reg[5U] = 0U;
         vlSelf->hw3_tb__DOT__golden_reg[6U] = 0U;
         vlSelf->hw3_tb__DOT__golden_reg[7U] = 0U;
-        vlSelf->hw3_tb__DOT__golden_reg[8U] = 0xfffffdfaU;
-        vlSelf->hw3_tb__DOT__golden_reg[9U] = 0x1344U;
-        vlSelf->hw3_tb__DOT__golden_reg[0xaU] = 0U;
-        vlSelf->hw3_tb__DOT__golden_reg[0xbU] = 0U;
+        vlSelf->hw3_tb__DOT__golden_reg[8U] = 0x17U;
+        vlSelf->hw3_tb__DOT__golden_reg[9U] = 0x44U;
+        vlSelf->hw3_tb__DOT__golden_reg[0xaU] = 0x44U;
+        vlSelf->hw3_tb__DOT__golden_reg[0xbU] = 0x17U;
         vlSelf->hw3_tb__DOT__golden_reg[0xcU] = 0U;
         vlSelf->hw3_tb__DOT__golden_reg[0xdU] = 0U;
         vlSelf->hw3_tb__DOT__golden_reg[0xeU] = 0U;
@@ -55,7 +55,7 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__2(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__golden_reg[0x1fU] = 0U;
         vlSelf->hw3_tb__DOT__golden_dmem[0U] = 0U;
         vlSelf->hw3_tb__DOT__golden_dmem[1U] = 0U;
-        vlSelf->hw3_tb__DOT__golden_dmem[2U] = 0U;
+        vlSelf->hw3_tb__DOT__golden_dmem[2U] = 0x44U;
         vlSelf->hw3_tb__DOT__golden_dmem[3U] = 0U;
         vlSelf->hw3_tb__DOT__golden_dmem[4U] = 0U;
         vlSelf->hw3_tb__DOT__golden_dmem[5U] = 0U;
@@ -597,8 +597,8 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__2(Vhw3_tb___024root* vlSelf
         } else {
             VL_WRITEF("Pass\n");
         }
-        VL_FINISH_MT("hw3_tb.new.v", 43, "");
-        VL_FINISH_MT("hw3_tb.new.v", 44, "");
+        VL_FINISH_MT("hw3_tb.v", 43, "");
+        VL_FINISH_MT("hw3_tb.v", 44, "");
     } else {
         __Vdly__hw3_tb__DOT__cycle_count = ((IData)(1U) 
                                             + vlSelf->hw3_tb__DOT__cycle_count);

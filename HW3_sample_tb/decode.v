@@ -45,7 +45,7 @@ module decode #(parameter DWIDTH = 32)
     assign opcode = instr[31:26];
     /* verilator lint_off LATCH */
     always @(*) begin
-        $display(opcode);
+        //$display(opcode);
     case (opcode)
         6'b000000: begin // R-Type instructions
             rs1_id  = instr[25:21];

@@ -411,7 +411,7 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_full_sub_0(Vhw3_tb___024root* vlSelf,
     tracep->fullBit(oldp+150,(vlSelf->finish));
     tracep->fullIData(oldp+151,(0x20U),32);
     tracep->fullIData(oldp+152,(vlSelf->hw3_tb__DOT__tmp),32);
-    tracep->fullIData(oldp+153,(0x19U),32);
+    tracep->fullIData(oldp+153,(8U),32);
     tracep->fullCData(oldp+154,(0U),3);
     tracep->fullCData(oldp+155,(1U),3);
     tracep->fullCData(oldp+156,(2U),3);
