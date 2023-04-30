@@ -51,7 +51,7 @@ module alu #(parameter DWIDTH = 32)
                 //assign overflow = 0;
             end
         endcase
-        $display(ALU_Result, rs1, rs2);
+        //$display(ALU_Result, rs1, rs2);
         //assign zero = (rd == 0)?1:0;
     end
     

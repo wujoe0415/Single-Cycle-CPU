@@ -46,7 +46,6 @@ module decode #(parameter DWIDTH = 32)
     assign opcode = instr[31:26];
     /* verilator lint_off LATCH */
     always @(*) begin
-        $display(opcode);
     case (opcode)
         6'b000000: begin // R-Type instructions
             rs1_id  = instr[25:21];
@@ -131,12 +130,12 @@ module decode #(parameter DWIDTH = 32)
         end
         6'b000100: begin // I-Type instructions (BEQ)
             rs1_id  = instr[25:21];
-            rdst_id = instr[20:16];
-            imm     = {{16{instr[15]}}, instr[15:0]};
-            ssel    = 2'b0;
+            rdst_id = 5'b0;
+            imm     = 32'b0;
+            ssel    = 2'b10;
             op      = OP_SUB;
-            rs2_id  = 5'b0;
-            jump_addr = 32'b0;
+            rs2_id  = instr[20:16];
+            jump_addr = {{16{instr[15]}}, instr[15:0]};
             jump_type = 3'b001;
             we_dmem = 1'b0;
             we_regfile = 1'b0;

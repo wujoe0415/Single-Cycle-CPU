@@ -15,6 +15,8 @@ module core_top #(
     // Program Counter signals
     reg  [DWIDTH-1:0] pc;
     wire [31 : 0] pc_in;
+    wire [31 : 0] pc_out;
+    assign pc_out = pc;
     always @(posedge clk) begin
         if (rst)
             pc <= 0;
@@ -24,7 +26,7 @@ module core_top #(
 
     wire [31 : 0] _RDATA;
     imem imem_inst(
-        .addr(pc),
+        .addr(pc_out),
         .rdata(_RDATA)
     );
     wire [31 : 0] _IMM, _JA;
@@ -95,7 +97,7 @@ module core_top #(
 
     wire [31 : 0] _PC_ADDER_RESULT;
     pc_adder pc_adder_inst(
-        .pc(pc),
+        .pc(pc_out),
         .result(_PC_ADDER_RESULT)
     );
     wire [31 : 0]_DECODE_ADDER;

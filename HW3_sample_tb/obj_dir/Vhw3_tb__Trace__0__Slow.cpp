@@ -11,18 +11,18 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_init_sub__TOP__0(Vhw3_tb___024root* v
     // Init
     const int c = vlSymsp->__Vm_baseCode;
     // Body
-    tracep->declBit(c+147,"clk", false,-1);
-    tracep->declBit(c+148,"rst", false,-1);
-    tracep->declBit(c+149,"finish", false,-1);
+    tracep->declBit(c+148,"clk", false,-1);
+    tracep->declBit(c+149,"rst", false,-1);
+    tracep->declBit(c+150,"finish", false,-1);
     tracep->pushNamePrefix("hw3_tb ");
-    tracep->declBit(c+147,"clk", false,-1);
-    tracep->declBit(c+148,"rst", false,-1);
-    tracep->declBit(c+149,"finish", false,-1);
-    tracep->declBus(c+150,"DWIDTH", false,-1, 31,0);
+    tracep->declBit(c+148,"clk", false,-1);
+    tracep->declBit(c+149,"rst", false,-1);
+    tracep->declBit(c+150,"finish", false,-1);
+    tracep->declBus(c+151,"DWIDTH", false,-1, 31,0);
     tracep->declBus(c+18,"i", false,-1, 31,0);
-    tracep->declBus(c+151,"tmp", false,-1, 31,0);
+    tracep->declBus(c+152,"tmp", false,-1, 31,0);
     tracep->declBus(c+19,"cycle_count", false,-1, 31,0);
-    tracep->declBus(c+152,"cycle_for_ans", false,-1, 31,0);
+    tracep->declBus(c+153,"cycle_for_ans", false,-1, 31,0);
     for (int i = 0; i < 32; ++i) {
         tracep->declBus(c+20+i*1,"golden_reg", true,(i+0), 31,0);
     }
@@ -31,18 +31,19 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_init_sub__TOP__0(Vhw3_tb___024root* v
     }
     tracep->declBit(c+68,"start", false,-1);
     tracep->pushNamePrefix("core_top_inst ");
-    tracep->declBus(c+150,"DWIDTH", false,-1, 31,0);
-    tracep->declBit(c+147,"clk", false,-1);
-    tracep->declBit(c+148,"rst", false,-1);
-    tracep->declBus(c+153,"J_TYPE_NOP", false,-1, 2,0);
-    tracep->declBus(c+154,"J_TYPE_BEQ", false,-1, 2,0);
-    tracep->declBus(c+155,"J_TYPE_JAL", false,-1, 2,0);
-    tracep->declBus(c+156,"J_TYPE_JR", false,-1, 2,0);
-    tracep->declBus(c+157,"J_TYPE_J", false,-1, 2,0);
+    tracep->declBus(c+151,"DWIDTH", false,-1, 31,0);
+    tracep->declBit(c+148,"clk", false,-1);
+    tracep->declBit(c+149,"rst", false,-1);
+    tracep->declBus(c+154,"J_TYPE_NOP", false,-1, 2,0);
+    tracep->declBus(c+155,"J_TYPE_BEQ", false,-1, 2,0);
+    tracep->declBus(c+156,"J_TYPE_JAL", false,-1, 2,0);
+    tracep->declBus(c+157,"J_TYPE_JR", false,-1, 2,0);
+    tracep->declBus(c+158,"J_TYPE_J", false,-1, 2,0);
     tracep->declBus(c+69,"pc", false,-1, 31,0);
     tracep->declBus(c+70,"pc_in", false,-1, 31,0);
+    tracep->declBus(c+69,"pc_out", false,-1, 31,0);
     tracep->pushNamePrefix("alu_inst ");
-    tracep->declBus(c+150,"DWIDTH", false,-1, 31,0);
+    tracep->declBus(c+151,"DWIDTH", false,-1, 31,0);
     tracep->declBus(c+71,"op", false,-1, 3,0);
     tracep->declBus(c+72,"rs1", false,-1, 31,0);
     tracep->declBus(c+73,"rs2", false,-1, 31,0);
@@ -58,7 +59,7 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_init_sub__TOP__0(Vhw3_tb___024root* v
     tracep->declBus(c+80,"decode_shift", false,-1, 31,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("decode_inst ");
-    tracep->declBus(c+150,"DWIDTH", false,-1, 31,0);
+    tracep->declBus(c+151,"DWIDTH", false,-1, 31,0);
     tracep->declBus(c+81,"instr", false,-1, 31,0);
     tracep->declBus(c+71,"op", false,-1, 3,0);
     tracep->declBus(c+82,"ssel", false,-1, 1,0);
@@ -71,18 +72,18 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_init_sub__TOP__0(Vhw3_tb___024root* v
     tracep->declBit(c+88,"we_dmem", false,-1);
     tracep->declBit(c+89,"we_regfile", false,-1);
     tracep->declBit(c+90,"is_load", false,-1);
-    tracep->declBus(c+158,"OP_AND", false,-1, 3,0);
-    tracep->declBus(c+159,"OP_OR", false,-1, 3,0);
-    tracep->declBus(c+160,"OP_ADD", false,-1, 3,0);
-    tracep->declBus(c+161,"OP_SUB", false,-1, 3,0);
-    tracep->declBus(c+162,"OP_NOR", false,-1, 3,0);
-    tracep->declBus(c+163,"OP_SLT", false,-1, 3,0);
-    tracep->declBus(c+164,"OP_JR", false,-1, 3,0);
-    tracep->declBus(c+165,"OP_NOT_DEFINED", false,-1, 3,0);
+    tracep->declBus(c+159,"OP_AND", false,-1, 3,0);
+    tracep->declBus(c+160,"OP_OR", false,-1, 3,0);
+    tracep->declBus(c+161,"OP_ADD", false,-1, 3,0);
+    tracep->declBus(c+162,"OP_SUB", false,-1, 3,0);
+    tracep->declBus(c+163,"OP_NOR", false,-1, 3,0);
+    tracep->declBus(c+164,"OP_SLT", false,-1, 3,0);
+    tracep->declBus(c+165,"OP_JR", false,-1, 3,0);
+    tracep->declBus(c+166,"OP_NOT_DEFINED", false,-1, 3,0);
     tracep->declBus(c+91,"opcode", false,-1, 6,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("dmem_inst ");
-    tracep->declBit(c+147,"clk", false,-1);
+    tracep->declBit(c+148,"clk", false,-1);
     tracep->declBus(c+92,"addr", false,-1, 5,0);
     tracep->declBit(c+88,"we", false,-1);
     tracep->declBus(c+93,"wdata", false,-1, 31,0);
@@ -114,22 +115,22 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_init_sub__TOP__0(Vhw3_tb___024root* v
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("mux5_1_inst ");
     tracep->declBit(c+75,"is_zero", false,-1);
-    tracep->declBus(c+86,"jump_type", false,-1, 2,0);
+    tracep->declBus(c+114,"jump_type", false,-1, 1,0);
     tracep->declBus(c+77,"adder_result1", false,-1, 31,0);
     tracep->declBus(c+87,"jump_address", false,-1, 31,0);
     tracep->declBus(c+79,"adder_result2", false,-1, 31,0);
     tracep->declBus(c+72,"jr_address", false,-1, 31,0);
     tracep->declBus(c+70,"pc_result", false,-1, 31,0);
-    tracep->declBus(c+166,"select", false,-1, 31,0);
+    tracep->declBus(c+114,"select", false,-1, 1,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("pc_adder_inst ");
     tracep->declBus(c+69,"pc", false,-1, 31,0);
     tracep->declBus(c+77,"result", false,-1, 31,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("reg_file_inst ");
-    tracep->declBus(c+150,"DWIDTH", false,-1, 31,0);
-    tracep->declBit(c+147,"clk", false,-1);
-    tracep->declBit(c+148,"rst", false,-1);
+    tracep->declBus(c+151,"DWIDTH", false,-1, 31,0);
+    tracep->declBit(c+148,"clk", false,-1);
+    tracep->declBit(c+149,"rst", false,-1);
     tracep->declBus(c+83,"rs1_id", false,-1, 4,0);
     tracep->declBus(c+84,"rs2_id", false,-1, 4,0);
     tracep->declBit(c+89,"we", false,-1);
@@ -138,10 +139,10 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_init_sub__TOP__0(Vhw3_tb___024root* v
     tracep->declBus(c+72,"rs1", false,-1, 31,0);
     tracep->declBus(c+93,"rs2", false,-1, 31,0);
     for (int i = 0; i < 32; ++i) {
-        tracep->declBus(c+114+i*1,"R", true,(i+0), 31,0);
+        tracep->declBus(c+115+i*1,"R", true,(i+0), 31,0);
     }
     tracep->pushNamePrefix("unnamedblk1 ");
-    tracep->declBus(c+146,"i", false,-1, 31,0);
+    tracep->declBus(c+147,"i", false,-1, 31,0);
     tracep->popNamePrefix(4);
 }
 
@@ -254,20 +255,19 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_full_sub_0(Vhw3_tb___024root* vlSelf,
     tracep->fullIData(oldp+67,(vlSelf->hw3_tb__DOT__golden_dmem[15]),32);
     tracep->fullBit(oldp+68,(vlSelf->hw3_tb__DOT__start));
     tracep->fullIData(oldp+69,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc),32);
-    tracep->fullIData(oldp+70,(((0U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select)
-                                 ? ((IData)(4U) + vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc)
-                                 : (((1U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select) 
-                                     & ((0U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)
-                                         ? 1U : 0U))
-                                     ? ((IData)(4U) 
-                                        + (vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc 
-                                           + (vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
-                                              << 2U)))
-                                     : ((2U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select)
-                                         ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA
-                                         : ((3U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select)
-                                             ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1
-                                             : vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA))))),32);
+    tracep->fullIData(oldp+70,((((1U == (3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT))) 
+                                 & ((0U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)
+                                     ? 1U : 0U)) ? 
+                                ((IData)(4U) + (vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc 
+                                                + (vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
+                                                   << 2U)))
+                                 : ((2U == (3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT)))
+                                     ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA
+                                     : ((3U == (3U 
+                                                & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT)))
+                                         ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1
+                                         : ((IData)(4U) 
+                                            + vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc))))),32);
     tracep->fullCData(oldp+71,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP),4);
     tracep->fullIData(oldp+72,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1),32);
     tracep->fullIData(oldp+73,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___ALU_RS2),32);
@@ -360,57 +360,57 @@ VL_ATTR_COLD void Vhw3_tb___024root__trace_full_sub_0(Vhw3_tb___024root* vlSelf,
                                  [(0xfU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result 
                                            >> 2U))]
                                   : vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)),32);
-    tracep->fullIData(oldp+114,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[0]),32);
-    tracep->fullIData(oldp+115,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[1]),32);
-    tracep->fullIData(oldp+116,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[2]),32);
-    tracep->fullIData(oldp+117,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[3]),32);
-    tracep->fullIData(oldp+118,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[4]),32);
-    tracep->fullIData(oldp+119,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[5]),32);
-    tracep->fullIData(oldp+120,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[6]),32);
-    tracep->fullIData(oldp+121,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[7]),32);
-    tracep->fullIData(oldp+122,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[8]),32);
-    tracep->fullIData(oldp+123,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[9]),32);
-    tracep->fullIData(oldp+124,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[10]),32);
-    tracep->fullIData(oldp+125,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[11]),32);
-    tracep->fullIData(oldp+126,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[12]),32);
-    tracep->fullIData(oldp+127,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[13]),32);
-    tracep->fullIData(oldp+128,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[14]),32);
-    tracep->fullIData(oldp+129,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[15]),32);
-    tracep->fullIData(oldp+130,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[16]),32);
-    tracep->fullIData(oldp+131,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[17]),32);
-    tracep->fullIData(oldp+132,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[18]),32);
-    tracep->fullIData(oldp+133,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[19]),32);
-    tracep->fullIData(oldp+134,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[20]),32);
-    tracep->fullIData(oldp+135,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[21]),32);
-    tracep->fullIData(oldp+136,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[22]),32);
-    tracep->fullIData(oldp+137,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[23]),32);
-    tracep->fullIData(oldp+138,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[24]),32);
-    tracep->fullIData(oldp+139,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[25]),32);
-    tracep->fullIData(oldp+140,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[26]),32);
-    tracep->fullIData(oldp+141,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[27]),32);
-    tracep->fullIData(oldp+142,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[28]),32);
-    tracep->fullIData(oldp+143,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[29]),32);
-    tracep->fullIData(oldp+144,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[30]),32);
-    tracep->fullIData(oldp+145,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[31]),32);
-    tracep->fullIData(oldp+146,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__unnamedblk1__DOT__i),32);
-    tracep->fullBit(oldp+147,(vlSelf->clk));
-    tracep->fullBit(oldp+148,(vlSelf->rst));
-    tracep->fullBit(oldp+149,(vlSelf->finish));
-    tracep->fullIData(oldp+150,(0x20U),32);
-    tracep->fullIData(oldp+151,(vlSelf->hw3_tb__DOT__tmp),32);
-    tracep->fullIData(oldp+152,(8U),32);
-    tracep->fullCData(oldp+153,(0U),3);
-    tracep->fullCData(oldp+154,(1U),3);
-    tracep->fullCData(oldp+155,(2U),3);
-    tracep->fullCData(oldp+156,(3U),3);
-    tracep->fullCData(oldp+157,(4U),3);
-    tracep->fullCData(oldp+158,(0U),4);
-    tracep->fullCData(oldp+159,(1U),4);
-    tracep->fullCData(oldp+160,(2U),4);
-    tracep->fullCData(oldp+161,(6U),4);
-    tracep->fullCData(oldp+162,(0xcU),4);
-    tracep->fullCData(oldp+163,(7U),4);
-    tracep->fullCData(oldp+164,(8U),4);
-    tracep->fullCData(oldp+165,(0xfU),4);
-    tracep->fullIData(oldp+166,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select),32);
+    tracep->fullCData(oldp+114,((3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT))),2);
+    tracep->fullIData(oldp+115,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[0]),32);
+    tracep->fullIData(oldp+116,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[1]),32);
+    tracep->fullIData(oldp+117,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[2]),32);
+    tracep->fullIData(oldp+118,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[3]),32);
+    tracep->fullIData(oldp+119,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[4]),32);
+    tracep->fullIData(oldp+120,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[5]),32);
+    tracep->fullIData(oldp+121,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[6]),32);
+    tracep->fullIData(oldp+122,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[7]),32);
+    tracep->fullIData(oldp+123,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[8]),32);
+    tracep->fullIData(oldp+124,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[9]),32);
+    tracep->fullIData(oldp+125,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[10]),32);
+    tracep->fullIData(oldp+126,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[11]),32);
+    tracep->fullIData(oldp+127,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[12]),32);
+    tracep->fullIData(oldp+128,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[13]),32);
+    tracep->fullIData(oldp+129,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[14]),32);
+    tracep->fullIData(oldp+130,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[15]),32);
+    tracep->fullIData(oldp+131,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[16]),32);
+    tracep->fullIData(oldp+132,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[17]),32);
+    tracep->fullIData(oldp+133,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[18]),32);
+    tracep->fullIData(oldp+134,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[19]),32);
+    tracep->fullIData(oldp+135,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[20]),32);
+    tracep->fullIData(oldp+136,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[21]),32);
+    tracep->fullIData(oldp+137,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[22]),32);
+    tracep->fullIData(oldp+138,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[23]),32);
+    tracep->fullIData(oldp+139,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[24]),32);
+    tracep->fullIData(oldp+140,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[25]),32);
+    tracep->fullIData(oldp+141,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[26]),32);
+    tracep->fullIData(oldp+142,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[27]),32);
+    tracep->fullIData(oldp+143,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[28]),32);
+    tracep->fullIData(oldp+144,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[29]),32);
+    tracep->fullIData(oldp+145,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[30]),32);
+    tracep->fullIData(oldp+146,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[31]),32);
+    tracep->fullIData(oldp+147,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__unnamedblk1__DOT__i),32);
+    tracep->fullBit(oldp+148,(vlSelf->clk));
+    tracep->fullBit(oldp+149,(vlSelf->rst));
+    tracep->fullBit(oldp+150,(vlSelf->finish));
+    tracep->fullIData(oldp+151,(0x20U),32);
+    tracep->fullIData(oldp+152,(vlSelf->hw3_tb__DOT__tmp),32);
+    tracep->fullIData(oldp+153,(8U),32);
+    tracep->fullCData(oldp+154,(0U),3);
+    tracep->fullCData(oldp+155,(1U),3);
+    tracep->fullCData(oldp+156,(2U),3);
+    tracep->fullCData(oldp+157,(3U),3);
+    tracep->fullCData(oldp+158,(4U),3);
+    tracep->fullCData(oldp+159,(0U),4);
+    tracep->fullCData(oldp+160,(1U),4);
+    tracep->fullCData(oldp+161,(2U),4);
+    tracep->fullCData(oldp+162,(6U),4);
+    tracep->fullCData(oldp+163,(0xcU),4);
+    tracep->fullCData(oldp+164,(7U),4);
+    tracep->fullCData(oldp+165,(8U),4);
+    tracep->fullCData(oldp+166,(0xfU),4);
 }

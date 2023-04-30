@@ -97,22 +97,20 @@ void Vhw3_tb___024root__trace_chg_sub_0(Vhw3_tb___024root* vlSelf, VerilatedVcd*
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[2U])) {
         tracep->chgIData(oldp+68,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc),32);
-        tracep->chgIData(oldp+69,(((0U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select)
+        tracep->chgIData(oldp+69,((((1U == (3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT))) 
+                                    & ((0U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)
+                                        ? 1U : 0U))
                                     ? ((IData)(4U) 
-                                       + vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc)
-                                    : (((1U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select) 
-                                        & ((0U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)
-                                            ? 1U : 0U))
-                                        ? ((IData)(4U) 
-                                           + (vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc 
-                                              + (vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
-                                                 << 2U)))
-                                        : ((2U == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select)
-                                            ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA
-                                            : ((3U 
-                                                == vlSelf->hw3_tb__DOT__core_top_inst__DOT__mux5_1_inst__DOT__select)
-                                                ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1
-                                                : vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA))))),32);
+                                       + (vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc 
+                                          + (vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
+                                             << 2U)))
+                                    : ((2U == (3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT)))
+                                        ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___JA
+                                        : ((3U == (3U 
+                                                   & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT)))
+                                            ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1
+                                            : ((IData)(4U) 
+                                               + vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc))))),32);
         tracep->chgCData(oldp+70,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP),4);
         tracep->chgIData(oldp+71,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1),32);
         tracep->chgIData(oldp+72,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___ALU_RS2),32);
@@ -213,43 +211,44 @@ void Vhw3_tb___024root__trace_chg_sub_0(Vhw3_tb___024root* vlSelf, VerilatedVcd*
                                     [(0xfU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result 
                                               >> 2U))]
                                      : vlSelf->hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result)),32);
-        tracep->chgIData(oldp+113,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[0]),32);
-        tracep->chgIData(oldp+114,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[1]),32);
-        tracep->chgIData(oldp+115,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[2]),32);
-        tracep->chgIData(oldp+116,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[3]),32);
-        tracep->chgIData(oldp+117,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[4]),32);
-        tracep->chgIData(oldp+118,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[5]),32);
-        tracep->chgIData(oldp+119,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[6]),32);
-        tracep->chgIData(oldp+120,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[7]),32);
-        tracep->chgIData(oldp+121,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[8]),32);
-        tracep->chgIData(oldp+122,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[9]),32);
-        tracep->chgIData(oldp+123,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[10]),32);
-        tracep->chgIData(oldp+124,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[11]),32);
-        tracep->chgIData(oldp+125,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[12]),32);
-        tracep->chgIData(oldp+126,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[13]),32);
-        tracep->chgIData(oldp+127,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[14]),32);
-        tracep->chgIData(oldp+128,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[15]),32);
-        tracep->chgIData(oldp+129,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[16]),32);
-        tracep->chgIData(oldp+130,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[17]),32);
-        tracep->chgIData(oldp+131,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[18]),32);
-        tracep->chgIData(oldp+132,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[19]),32);
-        tracep->chgIData(oldp+133,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[20]),32);
-        tracep->chgIData(oldp+134,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[21]),32);
-        tracep->chgIData(oldp+135,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[22]),32);
-        tracep->chgIData(oldp+136,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[23]),32);
-        tracep->chgIData(oldp+137,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[24]),32);
-        tracep->chgIData(oldp+138,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[25]),32);
-        tracep->chgIData(oldp+139,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[26]),32);
-        tracep->chgIData(oldp+140,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[27]),32);
-        tracep->chgIData(oldp+141,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[28]),32);
-        tracep->chgIData(oldp+142,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[29]),32);
-        tracep->chgIData(oldp+143,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[30]),32);
-        tracep->chgIData(oldp+144,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[31]),32);
-        tracep->chgIData(oldp+145,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__unnamedblk1__DOT__i),32);
+        tracep->chgCData(oldp+113,((3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT))),2);
+        tracep->chgIData(oldp+114,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[0]),32);
+        tracep->chgIData(oldp+115,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[1]),32);
+        tracep->chgIData(oldp+116,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[2]),32);
+        tracep->chgIData(oldp+117,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[3]),32);
+        tracep->chgIData(oldp+118,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[4]),32);
+        tracep->chgIData(oldp+119,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[5]),32);
+        tracep->chgIData(oldp+120,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[6]),32);
+        tracep->chgIData(oldp+121,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[7]),32);
+        tracep->chgIData(oldp+122,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[8]),32);
+        tracep->chgIData(oldp+123,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[9]),32);
+        tracep->chgIData(oldp+124,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[10]),32);
+        tracep->chgIData(oldp+125,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[11]),32);
+        tracep->chgIData(oldp+126,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[12]),32);
+        tracep->chgIData(oldp+127,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[13]),32);
+        tracep->chgIData(oldp+128,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[14]),32);
+        tracep->chgIData(oldp+129,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[15]),32);
+        tracep->chgIData(oldp+130,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[16]),32);
+        tracep->chgIData(oldp+131,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[17]),32);
+        tracep->chgIData(oldp+132,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[18]),32);
+        tracep->chgIData(oldp+133,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[19]),32);
+        tracep->chgIData(oldp+134,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[20]),32);
+        tracep->chgIData(oldp+135,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[21]),32);
+        tracep->chgIData(oldp+136,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[22]),32);
+        tracep->chgIData(oldp+137,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[23]),32);
+        tracep->chgIData(oldp+138,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[24]),32);
+        tracep->chgIData(oldp+139,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[25]),32);
+        tracep->chgIData(oldp+140,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[26]),32);
+        tracep->chgIData(oldp+141,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[27]),32);
+        tracep->chgIData(oldp+142,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[28]),32);
+        tracep->chgIData(oldp+143,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[29]),32);
+        tracep->chgIData(oldp+144,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[30]),32);
+        tracep->chgIData(oldp+145,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R[31]),32);
+        tracep->chgIData(oldp+146,(vlSelf->hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__unnamedblk1__DOT__i),32);
     }
-    tracep->chgBit(oldp+146,(vlSelf->clk));
-    tracep->chgBit(oldp+147,(vlSelf->rst));
-    tracep->chgBit(oldp+148,(vlSelf->finish));
+    tracep->chgBit(oldp+147,(vlSelf->clk));
+    tracep->chgBit(oldp+148,(vlSelf->rst));
+    tracep->chgBit(oldp+149,(vlSelf->finish));
 }
 
 void Vhw3_tb___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {

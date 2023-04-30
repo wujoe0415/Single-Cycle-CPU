@@ -1,0 +1,12 @@
+0: nor $t1, $t1, $t1
+1: addi $t1, $t1, 28541
+2: addi $t0, $t0, 11729
+3: addi $t0, $zero, 8920
+4: addi $t1, $t1, 1550
+5: addi $t1, $t1, -25158
+6: beq $t0, $t1, 5
+7: addi $t0, $t0, -16512
+8: addi $t0, $zero, -518
+9: beq $t1, $t0, 2
+10: add $t0, $zero, $t0
+11: j 11
