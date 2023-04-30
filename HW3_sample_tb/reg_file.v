@@ -36,15 +36,13 @@ always @(posedge clk) begin
         end
     end 
     else if (we & rdst_id != 0) begin
-        //$display(rdst_id);
         R[rdst_id] <= rdst;
-        //$display(R[rdst_id]);
     end
 end
 
 // Combinational logic: register reads
 assign rs1 = R[rs1_id];
 assign rs2 = (rs2_id != 0) ? R[rs2_id]: 0;
-// always @(*)
+//always @(*)
 //     $display("%d",rdst_id);
 endmodule

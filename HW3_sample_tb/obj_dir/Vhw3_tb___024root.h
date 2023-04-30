@@ -31,7 +31,6 @@ VL_MODULE(Vhw3_tb___024root) {
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT__pc_in;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___RDATA;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___IMM;
-    IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___JA;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___RS1;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___RS2;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___ALU_RS2;

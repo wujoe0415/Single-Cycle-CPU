@@ -11,5 +11,8 @@ module decode_adder(
     assign decode_shift[31:2] = decode[31-2:0] ;
     assign decode_shift[1:0] = 2'b00;
     assign result = pc + decode_shift;
+    // always @(*) begin
+    //     $display("pc : ",pc,"decode : ", decode, "decoder adder result : ", result);
+    // end
 
 endmodule

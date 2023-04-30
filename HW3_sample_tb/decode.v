@@ -40,12 +40,12 @@ module decode #(parameter DWIDTH = 32)
                      OP_SUB = 4'b0110,
                      OP_NOR = 4'b1100,
                      OP_SLT = 4'b0111,
-                     OP_JR  = 4'b1000,
                      OP_NOT_DEFINED = 4'b1111;
     reg[6:0] opcode;
     assign opcode = instr[31:26];
     /* verilator lint_off LATCH */
     always @(*) begin
+        $display(opcode);
     case (opcode)
         6'b000000: begin // R-Type instructions
             rs1_id  = instr[25:21];
@@ -67,9 +67,9 @@ module decode #(parameter DWIDTH = 32)
                 6'b101010: op = OP_SLT;
                 6'b001000:
                     begin
-                        op = OP_JR;
+                        op = OP_NOT_DEFINED;
                         jump_type = 3'b011;
-                        ssel = 2'b01;
+                        ssel = 2'b00;
                         we_regfile = 1'b0;
                     end
                 default:    op = OP_NOT_DEFINED;
@@ -91,7 +91,7 @@ module decode #(parameter DWIDTH = 32)
         6'b001010: begin // I-Type instructions (SLTI)
             rs1_id  = instr[25:21];
             rdst_id = instr[20:16];
-            imm     = {{16{instr[15]}}, instr[15:0]};
+            imm     = {{16{1'b0}}, instr[15:0]};
             ssel    = 2'b0;
             op      = OP_SLT;
             rs2_id  = 5'b0;
@@ -131,11 +131,11 @@ module decode #(parameter DWIDTH = 32)
         6'b000100: begin // I-Type instructions (BEQ)
             rs1_id  = instr[25:21];
             rdst_id = 5'b0;
-            imm     = 32'b0;
+            imm     = {{16{instr[15]}}, instr[15:0]};
             ssel    = 2'b10;
             op      = OP_SUB;
             rs2_id  = instr[20:16];
-            jump_addr = {{16{instr[15]}}, instr[15:0]};
+            jump_addr = 32'b0;
             jump_type = 3'b001;
             we_dmem = 1'b0;
             we_regfile = 1'b0;
@@ -143,13 +143,13 @@ module decode #(parameter DWIDTH = 32)
         end
         6'b000011: begin // J-Type instructions (JAL)
             rs1_id  = 5'b0;
-            rdst_id = 5'b0;
+            rdst_id = 5'b11111;
             imm     = 32'b0;
             ssel    = 2'b0;
             op      = OP_NOT_DEFINED;
             rs2_id  = 5'b0;
-            jump_addr = instr[25:0];
-            jump_type = 3'b011;
+            jump_addr = {{6{1'0}}, instr[25:0]};
+            jump_type = 3'b010;
             we_dmem = 1'b0;
             we_regfile = 1'b1;
             is_load = 1'b0;
@@ -161,8 +161,8 @@ module decode #(parameter DWIDTH = 32)
             ssel    = 2'b0;
             op      = OP_NOT_DEFINED;
             rs2_id  = 5'b0;
-            jump_addr = instr[25:0];
-            jump_type = 3'b100;
+            jump_addr = {{6{1'0}}, instr[25:0]};
+            jump_type = 3'b010;
             we_dmem = 1'b0;
             we_regfile = 1'b0;
             is_load = 1'b0;
