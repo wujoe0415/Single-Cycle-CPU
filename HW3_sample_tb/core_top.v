@@ -113,10 +113,11 @@ module core_top #(
         .decode_lw(_LW),
         .reg_rdst(_REG_RDST)
     );
+    wire [31:0] _JUMP_ADDR;
     mux5_1 mux5_1_inst(
         .jump_type(_JT),
         .adder_result1(_PC_ADDER_RESULT),
-        .jump_address(_JA),
+        .jump_address(_JUMP_ADDR),
         .adder_result2(_DECODE_ADDER),
         .jr_address(_RS1),
         .pc_result(pc_in),
@@ -128,6 +129,11 @@ module core_top #(
         .addr_ra(_PC_ADDER_RESULT),
         .reg_rs2(_RS2),
         .alu_rs2(_ALU_RS2)
+    );
+    jump_addr jump_addr_inst(
+        .pc(pc_out),
+        .jump_addr(_JA),
+        .answer_jump(_JUMP_ADDR)
     );
 
 endmodule

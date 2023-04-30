@@ -6,10 +6,10 @@
 
 #include "Vhw3_tb___024root.h"
 
-VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__2(Vhw3_tb___024root* vlSelf) {
+VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vhw3_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vhw3_tb___024root___sequent__TOP__2\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vhw3_tb___024root___sequent__TOP__3\n"); );
     // Init
     IData/*31:0*/ __Vdly__hw3_tb__DOT__cycle_count;
     // Body
@@ -606,10 +606,10 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__2(Vhw3_tb___024root* vlSelf
     vlSelf->hw3_tb__DOT__cycle_count = __Vdly__hw3_tb__DOT__cycle_count;
 }
 
-VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf) {
+VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__4(Vhw3_tb___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vhw3_tb__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vhw3_tb___024root___sequent__TOP__3\n"); );
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vhw3_tb___024root___sequent__TOP__4\n"); );
     // Init
     CData/*4:0*/ __Vdlyvdim0__hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R__v0;
     IData/*31:0*/ __Vdlyvval__hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__R__v0;
@@ -692,8 +692,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
         = vlSelf->hw3_tb__DOT__core_top_inst__DOT__imem_inst__DOT__RAM
         [(0xfU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc 
                   >> 2U))];
-    VL_WRITEF("%3#\n",7,(vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                         >> 0x1aU));
     if ((vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
          >> 0x1fU)) {
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
@@ -715,6 +713,107 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR 
             = (IData)((0xc000000U == (0x7c000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)));
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+    } else if ((0x40000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
+            = (0x1fU & 0U);
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+    } else if ((0x20000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
+            = (0x1fU & ((0x10000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                         ? 0U : ((0x8000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                  ? ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                      ? 0U : (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                                              >> 0x10U))
+                                  : ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                      ? 0U : (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                                              >> 0x10U)))));
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR 
+            = (IData)((0U == (0x1c000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)));
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+    } else if ((0x10000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
+            = (0x1fU & 0U);
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT 
+            = ((0x8000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                ? 0U : ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                         ? 0U : 1U));
+    } else if ((0x8000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
+            = (0x1fU & ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                         ? 0x1fU : 0U));
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR 
+            = (1U & (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                     >> 0x1aU));
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 2U;
+    } else if ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
+            = (0x1fU & 0U);
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+    } else {
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
+            = (0x1fU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                        >> 0xbU));
+        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 1U;
+        if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                      >> 5U)))) {
+            if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                          >> 4U)))) {
+                if ((8U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
+                    if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                                  >> 2U)))) {
+                        if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                                      >> 1U)))) {
+                            if ((1U & (~ vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA))) {
+                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
+                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 3U;
+                            } else {
+                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+                            }
+                        } else {
+                            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+                        }
+                    } else {
+                        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+                    }
+                } else {
+                    vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+                }
+            } else {
+                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+            }
+        } else {
+            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
+        }
+    }
+    vlSelf->hw3_tb__DOT__core_top_inst__DOT___JUMP_ADDR 
+        = ((0xf0000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc) 
+           | (((vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                >> 0x1fU) ? 0U : ((0x40000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                   ? 0U : ((0x20000000U 
+                                            & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                            ? 0U : 
+                                           ((0x10000000U 
+                                             & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                             ? 0U : 
+                                            ((0x8000000U 
+                                              & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                              ? (0x3ffffffU 
+                                                 & ((0x4000000U 
+                                                     & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                                     ? 
+                                                    (0x3ffffffU 
+                                                     & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
+                                                     : 
+                                                    (0x3ffffffU 
+                                                     & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)))
+                                              : 0U))))) 
+              << 2U));
+    if ((vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+         >> 0x1fU)) {
         if ((0x40000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
@@ -800,10 +899,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
                 = (0x1fU & 0U);
         }
     } else if ((0x40000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
-            = (0x1fU & 0U);
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM = 0U;
@@ -812,18 +907,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID 
             = (0x1fU & 0U);
     } else if ((0x20000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
-            = (0x1fU & ((0x10000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                         ? 0U : ((0x8000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                  ? ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                      ? 0U : (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                                              >> 0x10U))
-                                  : ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                      ? 0U : (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                                              >> 0x10U)))));
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR 
-            = (IData)((0U == (0x1c000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)));
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
         if ((0x10000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
@@ -841,7 +924,9 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
                 vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 7U;
                 vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
                 vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
-                    = (0xffffU & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA);
+                    = (((- (IData)((1U & (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
+                                          >> 0xfU)))) 
+                        << 0x10U) | (0xffffU & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA));
                 vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1_ID 
                     = (0x1fU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
                                 >> 0x15U));
@@ -866,11 +951,7 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID 
             = (0x1fU & 0U);
     } else if ((0x10000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
-            = (0x1fU & 0U);
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
         if ((0x8000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM = 0U;
@@ -879,7 +960,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID 
                 = (0x1fU & 0U);
         } else if ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM = 0U;
@@ -888,7 +968,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID 
                 = (0x1fU & 0U);
         } else {
-            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 1U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 6U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 2U;
             vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
@@ -903,13 +982,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
                             >> 0x10U));
         }
     } else if ((0x8000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
-            = (0x1fU & ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                         ? 0x1fU : 0U));
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR 
-            = (1U & (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                     >> 0x1aU));
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 2U;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM = 0U;
@@ -918,10 +990,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID 
             = (0x1fU & 0U);
     } else if ((0x4000000U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
-            = (0x1fU & 0U);
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP = 0xfU;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___SSEL = 0U;
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM = 0U;
@@ -930,41 +998,6 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS2_ID 
             = (0x1fU & 0U);
     } else {
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDST_ID 
-            = (0x1fU & (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                        >> 0xbU));
-        vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 1U;
-        if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                      >> 5U)))) {
-            if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                          >> 4U)))) {
-                if ((8U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)) {
-                    if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                                  >> 2U)))) {
-                        if ((1U & (~ (vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                                      >> 1U)))) {
-                            if ((1U & (~ vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA))) {
-                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___WR = 0U;
-                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 3U;
-                            } else {
-                                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-                            }
-                        } else {
-                            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-                        }
-                    } else {
-                        vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-                    }
-                } else {
-                    vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-                }
-            } else {
-                vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-            }
-        } else {
-            vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT = 0U;
-        }
         vlSelf->hw3_tb__DOT__core_top_inst__DOT___OP 
             = ((0x20U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
                 ? ((0x10U & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
@@ -1059,29 +1092,7 @@ VL_INLINE_OPT void Vhw3_tb___024root___sequent__TOP__3(Vhw3_tb___024root* vlSelf
                                               + (vlSelf->hw3_tb__DOT__core_top_inst__DOT___IMM 
                                                  << 2U)))
             : ((2U == (3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT)))
-                ? ((vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA 
-                    >> 0x1fU) ? 0U : ((0x40000000U 
-                                       & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                       ? 0U : ((0x20000000U 
-                                                & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                                ? 0U
-                                                : (
-                                                   (0x10000000U 
-                                                    & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                                    ? 0U
-                                                    : 
-                                                   ((0x8000000U 
-                                                     & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                                     ? 
-                                                    ((0x4000000U 
-                                                      & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                                      ? 
-                                                     (0x3ffffffU 
-                                                      & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA)
-                                                      : 
-                                                     (0x3ffffffU 
-                                                      & vlSelf->hw3_tb__DOT__core_top_inst__DOT___RDATA))
-                                                     : 0U)))))
+                ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___JUMP_ADDR
                 : ((3U == (3U & (IData)(vlSelf->hw3_tb__DOT__core_top_inst__DOT___JT)))
                     ? vlSelf->hw3_tb__DOT__core_top_inst__DOT___RS1
                     : ((IData)(4U) + vlSelf->hw3_tb__DOT__core_top_inst__DOT__pc))));
@@ -1093,11 +1104,11 @@ void Vhw3_tb___024root___eval(Vhw3_tb___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vhw3_tb___024root___eval\n"); );
     // Body
     if (((~ (IData)(vlSelf->clk)) & (IData)(vlSelf->__Vclklast__TOP__clk))) {
-        Vhw3_tb___024root___sequent__TOP__2(vlSelf);
+        Vhw3_tb___024root___sequent__TOP__3(vlSelf);
         vlSelf->__Vm_traceActivity[1U] = 1U;
     }
     if (((IData)(vlSelf->clk) & (~ (IData)(vlSelf->__Vclklast__TOP__clk)))) {
-        Vhw3_tb___024root___sequent__TOP__3(vlSelf);
+        Vhw3_tb___024root___sequent__TOP__4(vlSelf);
         vlSelf->__Vm_traceActivity[2U] = 1U;
     }
     // Final

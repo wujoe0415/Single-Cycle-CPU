@@ -91,7 +91,7 @@ module decode #(parameter DWIDTH = 32)
         6'b001010: begin // I-Type instructions (SLTI)
             rs1_id  = instr[25:21];
             rdst_id = instr[20:16];
-            imm     = {{16{1'b0}}, instr[15:0]};
+            imm     = {{16{instr[15]}}, instr[15:0]};
             ssel    = 2'b0;
             op      = OP_SLT;
             rs2_id  = 5'b0;

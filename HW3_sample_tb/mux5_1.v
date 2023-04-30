@@ -9,6 +9,7 @@ module mux5_1(
     assign pc_result = (select == 3'b001 && is_zero) ? adder_result2:
                        (select == 3'b010) ? jump_address:
                        (select == 3'b011) ? jr_address: adder_result1; 
+    
     // always @(*) begin
     //     $display("adder result2 : ", adder_result2);
     //     //$display("select = %b, is_zero = %b", select, is_zero);

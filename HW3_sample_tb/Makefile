@@ -1,4 +1,4 @@
-SRC = hw3_tb.v alu.v decode.v dmem.v imem.v reg_file.v mux2_1.v mux4_1.v mux5_1.v decode_adder.v pc_adder.v
+SRC = hw3_tb.v alu.v decode.v dmem.v imem.v reg_file.v mux2_1.v mux4_1.v mux5_1.v decode_adder.v pc_adder.v jump_addr.v
 OUT = Vhw3_tb
 
 all:

@@ -34,9 +34,11 @@ VL_MODULE(Vhw3_tb___024root) {
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___RS1;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___RS2;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___ALU_RS2;
+    IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT___JUMP_ADDR;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT__reg_file_inst__DOT__unnamedblk1__DOT__i;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT__alu_inst__DOT__ALU_Result;
     IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT__dmem_inst__DOT__idx;
+    IData/*31:0*/ hw3_tb__DOT__core_top_inst__DOT__jump_addr_inst__DOT__decode_shift;
     VlUnpacked<IData/*31:0*/, 32> hw3_tb__DOT__golden_reg;
     VlUnpacked<IData/*31:0*/, 16> hw3_tb__DOT__golden_dmem;
     VlUnpacked<IData/*31:0*/, 16> hw3_tb__DOT__core_top_inst__DOT__imem_inst__DOT__RAM;
